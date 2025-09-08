@@ -1,0 +1,39 @@
+<!-- banco-brasil.component.html -->
+<h3>Banco do Brasil</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <label>Descrição/Nome do Evento:</label>
+  <input formControlName="descricao">
+
+  <label>Código Manager:</label>
+  <input formControlName="codigoManager">
+
+  <label>Sigla:</label>
+  <input formControlName="sigla">
+
+  <label>Número do Convênio:</label>
+  <input formControlName="numeroConvenio">
+
+  <label>E-commerce:</label>
+  <input formControlName="eCommerce">
+
+  <label>Carteira:</label>
+  <input formControlName="carteira">
+
+  <label>Variação:</label>
+  <input formControlName="variacao">
+
+  <label>Cedente-Conta:</label>
+  <input formControlName="cedenteConta">
+
+  <label>Dígito Cedente/Conta:</label>
+  <input formControlName="digitoConta">
+
+  <label>Agência:</label>
+  <input formControlName="agencia">
+
+  <label>Dígito Agência:</label>
+  <input formControlName="digitoAgencia">
+
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>

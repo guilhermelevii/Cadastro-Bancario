@@ -1,0 +1,33 @@
+<!-- sicoob.component.html -->
+<h3>Sicoob</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <label>Descrição/Nome do Evento:</label>
+  <input formControlName="descricao">
+
+  <label>Código Manager:</label>
+  <input formControlName="codigoManager">
+
+  <label>Sigla:</label>
+  <input formControlName="sigla">
+
+  <label>Cedente-Conta:</label>
+  <input formControlName="cedenteConta">
+
+  <label>Dígito Cedente/Conta:</label>
+  <input formControlName="digitoConta">
+
+  <label>Chave:</label>
+  <input formControlName="chave">
+
+  <label>Agência:</label>
+  <input formControlName="agencia">
+
+  <label>Sequência Inicial de Boletos:</label>
+  <input formControlName="seqInicial">
+
+  <label>Sequência Final de Boletos:</label>
+  <input formControlName="seqFinal">
+
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>

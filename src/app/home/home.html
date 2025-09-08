@@ -1,0 +1,16 @@
+<!-- home.component.html -->
+<h2>Cadastro Bancário</h2>
+
+<select [(ngModel)]="bancoSelecionado">
+  <option value="">-- Selecione o Banco --</option>
+  <option value="BB">Banco do Brasil</option>
+  <option value="SICOOB">Sicoob</option>
+</select>
+
+<div *ngIf="bancoSelecionado === 'BB'">
+  <app-banco-brasil></app-banco-brasil>
+</div>
+
+<div *ngIf="bancoSelecionado === 'SICOOB'">
+  <app-sicoob></app-sicoob>
+</div>

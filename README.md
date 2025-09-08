@@ -1,3 +1,6 @@
+Fonte de estudos
+https://conteudos.kipperdev.com.br/aprenda-angular-do-zero
+
 # 🧭 Guia do Projeto Angular - 
 
 Este documento organiza e padroniza as instruções de **instalação**, **uso** e **boas práticas** para o projeto Angular , utilizando a versão `20.0.0` da Angular CLI.
