@@ -6,7 +6,7 @@ Este documento organiza e padroniza as instruções de **instalação**, **uso**
 
 ## 🚀 Iniciando o Projeto
 
-ng new
+ng new 'castro'
 
 
 ## Estrutura do Projetos Angular 
