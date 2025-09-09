@@ -1,5 +1,6 @@
 Fonte de estudos
 https://conteudos.kipperdev.com.br/aprenda-angular-do-zero
+https://material.angular.dev/guide/getting-started
 
 # 🧭 Guia do Projeto Angular - 
 
@@ -287,6 +288,10 @@ No HTML:
 Implemente `ControlValueAccessor`.
 
 ---
+
+## Angular Material
+
+Estilização com biblioteca do Angualr
 
 ### No Angular especificamente BUILD 🔹
 
