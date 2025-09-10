@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+
 
 @Component({
   selector: 'app-banco-brasil',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule,MatFormFieldModule,       
-    MatSelectModule],
+    MatSelectModule, MatInputModule,MatButtonModule,MatCardModule],
   templateUrl: './banco-brasil.html',
   styleUrls: ['./banco-brasil.css']
 })
