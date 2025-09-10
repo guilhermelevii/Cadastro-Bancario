@@ -3,12 +3,16 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from "./home/home";
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 @Component({
   selector: 'app-root', // Seletor do componete, se for usar esse componente em outro lugar você utiliza ele <app-root></app-root>.Utilizado no index.html
   standalone: true,
-  imports: [CommonModule,RouterOutlet, FormsModule, HomeComponent],
+  imports: [CommonModule,RouterOutlet, FormsModule, HomeComponent,MatFormFieldModule,
+    MatSelectModule,],
   templateUrl: './app.html', //Obrigatorio
   styleUrl: './app.css',
   // template:'<h1>olá</h1>'

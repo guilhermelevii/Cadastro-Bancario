@@ -291,7 +291,9 @@ Implemente `ControlValueAccessor`.
 
 ## Angular Material
 
-Estilização com biblioteca do Angualr
+Estilização com biblioteca do Angular
+
+
 
 ### No Angular especificamente BUILD 🔹
 
