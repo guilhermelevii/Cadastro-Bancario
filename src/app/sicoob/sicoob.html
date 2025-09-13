@@ -1,40 +1,11 @@
 <!-- sicoob.component.html -->
-<!-- <h3>Sicoob</h3>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-
-  <label>Descrição/Nome do Evento:</label>
-  <input formControlName="descricao">
-
-  <label>Código Manager:</label>
-  <input formControlName="codigoManager">
-
-  <label>Sigla:</label>
-  <input formControlName="sigla">
-
-  <label>Cedente-Conta:</label>
-  <input formControlName="cedenteConta">
-
-  <label>Dígito Cedente/Conta:</label>
-  <input formControlName="digitoConta">
-
-  <label>Chave:</label>
-  <input formControlName="chave">
-
-  <label>Agência:</label>
-  <input formControlName="agencia">
-
-  <label>Sequência Inicial de Boletos:</label>
-  <input formControlName="seqInicial">
-
-  <label>Sequência Final de Boletos:</label>
-  <input formControlName="seqFinal">
-
-  <button type="submit" [disabled]="form.invalid">Enviar</button>
-</form> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
 
 <mat-card class="form-card">
-  <mat-card-title>Sicoob</mat-card-title>
+  <mat-card-title class="title">Banco Sicoob</mat-card-title>
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
 

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; /* centraliza verticalmente */
-  /* min-height: 100vh; */
+  min-height: 100vh;
   transition: all 0.5s ease;
   padding: 1rem;
   
@@ -18,9 +18,19 @@
 
 /* Título */
 .titulo {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  /* padding-bottom: 20px; */
+  font-size: 40px;
+  
 }
 
 /* Select responsivo */
@@ -35,4 +45,39 @@
   margin-top: 2rem;
   width: 100%;
   max-width: 800px;
+}
+
+
+/* Card centralizado */
+.card {
+  background: white; /* branco translúcido */
+  backdrop-filter: blur(10px); /* efeito vidro fosco */
+  border-radius: 1rem; /* cantos arredondados */
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 600px;
+  transition: all 0.3s ease;
+}
+
+/* Quando tem conteúdo selecionado, o card expande */
+.card .conteudo {
+  margin-top: 1.5rem;
+}
+
+/* Fundo geral da tela */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* gradiente moderno */
+  padding: 1rem;
+}
+
+/* Quando já tem banco selecionado, o conteúdo sobe */
+.home-container.com-selecao {
+  justify-content: flex-start;
+  padding-top: 3rem;
 }
