@@ -1,3 +1,5 @@
+
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NgxMaskDirective } from 'ngx-mask';
 
+import { BancoBrasil } from '../models/banco-brasil.model';
+import { FormularioService } from '../services/formulario.service';
 
 @Component({
   selector: 'app-banco-brasil',
@@ -21,16 +25,17 @@ import { NgxMaskDirective } from 'ngx-mask';
     MatButtonModule,
     MatCardModule,
     NgxMaskDirective,
-],
-
+  ],
   templateUrl: './banco-brasil.html',
   styleUrls: ['./banco-brasil.css'],
-
 })
 export class BancoBrasilComponent {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private formularioService: FormularioService
+  ) {
     this.form = this.fb.group({
       descricao: ['', [Validators.required, Validators.minLength(3)]],
       codigoManager: ['', [Validators.required]],
@@ -48,9 +53,12 @@ export class BancoBrasilComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      console.log('✅ Dados Sicoob:', this.form.value);
+      const dados: BancoBrasil = this.form.value;
+      this.formularioService.salvarBancoBrasil(dados).subscribe({
+        next: (res) => console.log('✅ Dados enviados (Banco Brasil):', res),
+        error: (err) => console.error('❌ Erro ao enviar Banco Brasil', err),
+      });
     } else {
-      console.log('❌ Form inválido');
       this.form.markAllAsTouched();
     }
   }

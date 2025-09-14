@@ -1,4 +1,5 @@
 
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,7 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NgxMaskDirective } from 'ngx-mask';
-// import { ViewEncapsulation } from '@angular/core';
+
+import { Sicoob } from '../models/sicoob.model';
+import { FormularioService } from '../services/formulario.service';
 
 @Component({
   selector: 'app-sicoob',
@@ -22,17 +25,17 @@ import { NgxMaskDirective } from 'ngx-mask';
     MatButtonModule,
     MatCardModule,
     NgxMaskDirective,
-    
   ],
   templateUrl: './sicoob.html',
   styleUrls: ['./sicoob.css'],
-  // encapsulation: ViewEncapsulation.None,
 })
-
 export class SicoobComponent {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private formularioService: FormularioService
+  ) {
     this.form = this.fb.group({
       descricao: ['', [Validators.required, Validators.minLength(3)]],
       codigoManager: ['', [Validators.required]],
@@ -42,15 +45,18 @@ export class SicoobComponent {
       chave: ['', [Validators.required]],
       agencia: ['', [Validators.required]],
       seqInicial: ['', [Validators.required]],
-      seqFinal: ['', [Validators.required]]
+      seqFinal: ['', [Validators.required]],
     });
   }
 
   onSubmit() {
     if (this.form.valid) {
-      console.log('✅ Dados Sicoob:', this.form.value);
+      const dados: Sicoob = this.form.value;
+      this.formularioService.salvarSicoob(dados).subscribe({
+        next: (res) => console.log('✅ Dados enviados (Sicoob):', res),
+        error: (err) => console.error('❌ Erro ao enviar Sicoob', err),
+      });
     } else {
-      console.log('❌ Form inválido');
       this.form.markAllAsTouched();
     }
   }
