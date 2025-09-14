@@ -20,3 +20,5 @@ export class FormularioService {
     return this.http.post<BancoBrasil>(`${this.apiUrl}/banco-brasil`, dados);
   }
 }
+
+// 👉 Quer que eu já te mostre como ficaria a API fake com JSON-Server (pra você testar os POSTs sem depender do backend real)?
