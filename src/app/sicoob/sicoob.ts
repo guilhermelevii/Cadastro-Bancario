@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NgxMaskDirective } from 'ngx-mask';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-sicoob',
@@ -22,10 +23,13 @@ import { NgxMaskDirective } from 'ngx-mask';
     MatCardModule,
     NgxMaskDirective,
     
+    
   ],
   templateUrl: './sicoob.html',
-  styleUrls: ['./sicoob.css']
+  styleUrls: ['./sicoob.css'],
+  encapsulation: ViewEncapsulation.None,
 })
+
 export class SicoobComponent {
   form: FormGroup;
 
