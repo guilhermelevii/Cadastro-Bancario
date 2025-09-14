@@ -23,7 +23,6 @@ import { ViewEncapsulation } from '@angular/core';
     MatCardModule,
     NgxMaskDirective,
     
-    
   ],
   templateUrl: './sicoob.html',
   styleUrls: ['./sicoob.css'],
