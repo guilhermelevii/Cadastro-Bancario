@@ -13,18 +13,19 @@ import { NgxMaskDirective } from 'ngx-mask';
   selector: 'app-banco-brasil',
   standalone: true,
   imports: [
-     CommonModule,
-     ReactiveFormsModule,
-     MatFormFieldModule,       
-     MatSelectModule,
-     MatInputModule,
-     MatButtonModule,
-     MatCardModule,
-     NgxMaskDirective,
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    NgxMaskDirective,
+],
 
-    ],
   templateUrl: './banco-brasil.html',
-  styleUrls: ['./banco-brasil.css']
+  styleUrls: ['./banco-brasil.css'],
+
 })
 export class BancoBrasilComponent {
   form: FormGroup;

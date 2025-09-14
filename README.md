@@ -312,6 +312,13 @@ Otimiza (minifica, remove espaços, comentários, etc) para deixar mais rápido.
 👉 O resultado do build é o que você coloca em produção, no servidor ou hospedagem.
 
 
+## Reiniciar o TypeScript Server (mais provável)
+
+Aperte Ctrl+Shift+P
+Digite: TypeScript: Restart TS Server
+Pressione Enter
+
+
 ## 📖 Licença
 
 Este projeto é licenciado sob os termos da [MIT License](LICENSE).
