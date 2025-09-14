@@ -5,6 +5,7 @@ import { BancoBrasilComponent } from '../banco-brasil/banco-brasil'; // Componen
 import { SicoobComponent } from '../sicoob/sicoob'; // Componente filho
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 
 
 
@@ -17,6 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,      // Se quiser usar forms reativos depois
     MatFormFieldModule,       
     MatSelectModule,
+    MatOptionModule,
     BancoBrasilComponent,     // Importando os componentes usados no HTML
     SicoobComponent
   ],
