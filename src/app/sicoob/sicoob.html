@@ -1,59 +1,75 @@
-<!-- sicoob.component.html -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+<!--HTML SICOOB -->
 
 <mat-card class="form-card">
   <mat-card-title class="title">Banco Sicoob</mat-card-title>
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
 
+      <!-- Descrição -->
       <mat-form-field appearance="outline">
         <mat-label>Descrição/Nome do Evento</mat-label>
         <input matInput formControlName="descricao">
+        <mat-error *ngIf="form.get('descricao')?.hasError('required')">Campo obrigatório</mat-error>
+        <mat-error *ngIf="form.get('descricao')?.hasError('minlength')">Mínimo 3 caracteres</mat-error>
       </mat-form-field>
 
+      <!-- Código Manager -->
       <mat-form-field appearance="outline">
         <mat-label>Código Manager</mat-label>
-        <input matInput formControlName="codigoManager">
+        <input matInput formControlName="codigoManager" mask="000000"> <!-- até 6 dígitos -->
+        <mat-error *ngIf="form.get('codigoManager')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Sigla -->
       <mat-form-field appearance="outline">
         <mat-label>Sigla</mat-label>
-        <input matInput formControlName="sigla">
+        <input matInput formControlName="sigla" />
+        <mat-error *ngIf="form.get('sigla')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Cedente Conta -->
       <mat-form-field appearance="outline">
         <mat-label>Cedente-Conta</mat-label>
-        <input matInput formControlName="cedenteConta">
+        <input matInput formControlName="cedenteConta" mask="0000000000"> <!-- até 10 dígitos -->
+        <mat-error *ngIf="form.get('cedenteConta')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Dígito Conta -->
       <mat-form-field appearance="outline">
         <mat-label>Dígito Cedente/Conta</mat-label>
-        <input matInput formControlName="digitoConta">
+        <input matInput formControlName="digitoConta" mask="0"> <!-- 1 dígito -->
+        <mat-error *ngIf="form.get('digitoConta')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Chave -->
       <mat-form-field appearance="outline">
         <mat-label>Chave</mat-label>
         <input matInput formControlName="chave">
+        <mat-error *ngIf="form.get('chave')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Agência -->
       <mat-form-field appearance="outline">
         <mat-label>Agência</mat-label>
-        <input matInput formControlName="agencia">
+        <input matInput formControlName="agencia" mask="0000"> <!-- 4 dígitos -->
+        <mat-error *ngIf="form.get('agencia')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Seq Inicial -->
       <mat-form-field appearance="outline">
         <mat-label>Sequência Inicial de Boletos</mat-label>
-        <input matInput formControlName="seqInicial">
+        <input matInput formControlName="seqInicial" mask="0000000"> <!-- 7 dígitos -->
+        <mat-error *ngIf="form.get('seqInicial')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Seq Final -->
       <mat-form-field appearance="outline">
         <mat-label>Sequência Final de Boletos</mat-label>
-        <input matInput formControlName="seqFinal">
+        <input matInput formControlName="seqFinal" mask="0000000"> <!-- 7 dígitos -->
+        <mat-error *ngIf="form.get('seqFinal')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
+      <!-- Botão -->
       <div class="form-actions">
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" [ngClass]="{active: form.valid}">
           Enviar
@@ -62,3 +78,4 @@
     </form>
   </mat-card-content>
 </mat-card>
+
