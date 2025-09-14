@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Sicoob } from '../models/sicoob.model';
 import { BancoBrasil } from '../models/banco-brasil.model';
 
@@ -13,7 +13,9 @@ export class FormularioService {
   constructor(private http: HttpClient) {}
 
   salvarSicoob(dados: Sicoob): Observable<Sicoob> {
-    return this.http.post<Sicoob>(`${this.apiUrl}/sicoob`, dados);
+    // return this.http.post<Sicoob>(`${this.apiUrl}/sicoob`, dados);
+    console.log('Dados do formulário:', dados);
+    return of (dados)
   }
 
   salvarBancoBrasil(dados: BancoBrasil): Observable<BancoBrasil> {
