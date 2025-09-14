@@ -12,3 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient()
   ]
 };
+
+// Foram importado o provide e adicionado.
+// import { provideHttpClient } from '@angular/common/http';
+//  provideHttpClient()

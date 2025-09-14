@@ -6,7 +6,7 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
 
       <!-- Descrição -->
-      <mat-form-field appearance="outline" >
+      <mat-form-field appearance="outline">
         <mat-label>Descrição/Nome do Evento</mat-label>
         <input matInput formControlName="descricao">
         <mat-error *ngIf="form.get('descricao')?.hasError('required')">Campo obrigatório</mat-error>
