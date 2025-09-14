@@ -1,9 +1,8 @@
-
-
 .form-card {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
+  max-width: 900px;
+  /* margin: 2rem auto; */
+  margin: 0;
+  padding: 1rem ;
   background-color: rgba(202, 201, 201, 0.24);
 }
 
@@ -23,13 +22,37 @@
 
 .form-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 
 .form-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 1rem;
+}
+
+.form-actions button {
+  padding: 0.75rem 2rem;       /* aumenta área de clique */
+  font-size: 1.1rem;           /* fonte maior */
+  font-weight: 500;            /* mais “forte” */
+  border-radius: 0.5rem;       /* cantos arredondados */
+  min-width: 150px;            /* largura mínima */
+  transition: all 0.3s ease;   /* animação suave */
+}
+
+.form-actions button.active {
+  background: linear-gradient(90deg, #429255, #2A5C90); /* Gradiente quando o formulário é válido */
+  cursor: pointer; /* Torna o botão clicável quando válido */
+  color: white;
+}
+
+.form-actions button:disabled {
+  cursor: not-allowed; /* Desabilita o cursor quando o botão estiver desabilitado */
+}
+
+.form-actions button:hover {
+  transform: translateY(-2px); /* leve efeito hover */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 @media (min-width: 768px) {
