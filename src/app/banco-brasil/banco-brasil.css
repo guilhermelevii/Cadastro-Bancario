@@ -6,7 +6,7 @@
   background-color: rgba(202, 201, 201, 0.24);
 }
 
-.title{
+mat-card-title.title{
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;

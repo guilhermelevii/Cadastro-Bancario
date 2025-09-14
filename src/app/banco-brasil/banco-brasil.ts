@@ -6,13 +6,23 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { NgxMaskDirective } from 'ngx-mask';
 
 
 @Component({
   selector: 'app-banco-brasil',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule,MatFormFieldModule,       
-    MatSelectModule, MatInputModule,MatButtonModule,MatCardModule],
+  imports: [
+     CommonModule,
+     ReactiveFormsModule,
+     MatFormFieldModule,       
+     MatSelectModule,
+     MatInputModule,
+     MatButtonModule,
+     MatCardModule,
+     NgxMaskDirective,
+
+    ],
   templateUrl: './banco-brasil.html',
   styleUrls: ['./banco-brasil.css']
 })
@@ -21,23 +31,26 @@ export class BancoBrasilComponent {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      descricao: ['', Validators.required],
-      codigoManager: ['', Validators.required],
-      sigla: ['', Validators.required],
-      numeroConvenio: ['', Validators.required],
-      eCommerce: ['', Validators.required],
-      carteira: ['', Validators.required],
-      variacao: ['', Validators.required],
-      cedenteConta: ['', Validators.required],
-      digitoConta: ['', Validators.required],
-      agencia: ['', Validators.required],
-      digitoAgencia: ['', Validators.required],
+      descricao: ['', [Validators.required, Validators.minLength(3)]],
+      codigoManager: ['', [Validators.required]],
+      sigla: ['', [Validators.required]],
+      numeroConvenio: ['', [Validators.required]],
+      eCommerce: ['', [Validators.required]],
+      carteira: ['', [Validators.required]],
+      variacao: ['', [Validators.required]],
+      cedenteConta: ['', [Validators.required]],
+      digitoConta: ['', [Validators.required]],
+      agencia: ['', [Validators.required]],
+      digitoAgencia: ['', [Validators.required]],
     });
   }
 
   onSubmit() {
     if (this.form.valid) {
-      console.log('Dados Banco do Brasil:', this.form.value);
+      console.log('✅ Dados Sicoob:', this.form.value);
+    } else {
+      console.log('❌ Form inválido');
+      this.form.markAllAsTouched();
     }
   }
 }

@@ -11,7 +11,9 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Descrição/Nome do Evento</mat-label>
-        <input matInput formControlName="descricao" placeholder="nome do evento">
+        <input matInput formControlName="descricao">
+        <mat-error *ngIf="form.get('descricao')?.hasError('required')">Campo obrigatório</mat-error>
+        <mat-error *ngIf="form.get('descricao')?.hasError('minlength')">Mínimo 3 caracteres</mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
