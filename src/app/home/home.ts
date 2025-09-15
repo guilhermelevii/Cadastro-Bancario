@@ -6,6 +6,7 @@ import { SicoobComponent } from '../sicoob/sicoob'; // Componente filho
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatCard } from "@angular/material/card";
 
 
 
@@ -13,18 +14,20 @@ import { MatOptionModule } from '@angular/material/core';
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule,             // Para diretivas como *ngIf
-    FormsModule,              // Para [(ngModel)]
-    ReactiveFormsModule,      // Se quiser usar forms reativos depois
-    MatFormFieldModule,       
+    CommonModule, // Para diretivas como *ngIf
+    FormsModule, // Para [(ngModel)]
+    ReactiveFormsModule, // Se quiser usar forms reativos depois
+    MatFormFieldModule,
     MatSelectModule,
     MatOptionModule,
-    BancoBrasilComponent,     // Importando os componentes usados no HTML
-    SicoobComponent
-  ],
+    BancoBrasilComponent, // Importando os componentes usados no HTML
+    SicoobComponent,
+    MatCard
+],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
 export class HomeComponent {
+  logoPath: string = 'src\assets\logosif_4.png';
   bancoSelecionado: string = ''; // Variável usada no select [(ngModel)]
 }
