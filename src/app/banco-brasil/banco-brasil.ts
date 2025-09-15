@@ -25,6 +25,7 @@ import { FormularioService } from '../services/formulario.service';
     MatButtonModule,
     MatCardModule,
     NgxMaskDirective,
+    
   ],
   templateUrl: './banco-brasil.html',
   styleUrls: ['./banco-brasil.css'],
