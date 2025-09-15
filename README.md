@@ -337,6 +337,15 @@ Pressione Enter
 // Biblioteca de Terceiros
     NgxMaskDirective,   // Diretiva para aplicar máscaras de formatação a campos de entrada (ex: CPF, telefone).
 
+## Utilizar a pasta assests, tive que adicionar o diretorio no angular.json
+
+"assets": [
+  "src/assets", <-- aqui
+  {
+    "glob": "**/*",
+    "input": "public"
+  }
+]
 
 ## 📖 Licença
 
