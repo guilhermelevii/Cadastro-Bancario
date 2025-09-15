@@ -9,18 +9,19 @@
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-grid">
 
-      <!-- Descrição -->
       <mat-form-field appearance="outline">
-        <mat-label>Descrição/Nome do Evento</mat-label>
-        <input matInput formControlName="descricao">
-        <mat-error *ngIf="form.get('descricao')?.hasError('required')">Campo obrigatório</mat-error>
-        <mat-error *ngIf="form.get('descricao')?.hasError('minlength')">Mínimo 3 caracteres</mat-error>
+       <mat-label>Descrição/Nome do Evento</mat-label>
+       <input matInput formControlName="descricao">
+       <mat-icon matSuffix *ngIf="form.get('descricao')?.valid" class="valid-icon">done</mat-icon>
+       <mat-error *ngIf="form.get('descricao')?.hasError('required')">Campo obrigatório</mat-error>
+       <mat-error *ngIf="form.get('descricao')?.hasError('minlength')">Mínimo 3 caracteres</mat-error>
       </mat-form-field>
 
       <!-- Código Manager -->
       <mat-form-field appearance="outline">
         <mat-label>Código Manager</mat-label>
         <input matInput formControlName="codigoManager"  mask="000000"> <!-- até 6 dígitos -->
+        <mat-icon matSuffix *ngIf="form.get('codigoManager')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('codigoManager')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -28,6 +29,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Sigla</mat-label>
         <input matInput formControlName="sigla">
+        <mat-icon matSuffix *ngIf="form.get('sigla')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('sigla')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 

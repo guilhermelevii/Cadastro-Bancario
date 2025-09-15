@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NgxMaskDirective } from 'ngx-mask';
+import { MatIconModule } from '@angular/material/icon';
 
 import { BancoBrasil } from '../models/banco-brasil.model';
 import { FormularioService } from '../services/formulario.service';
@@ -25,6 +26,7 @@ import { FormularioService } from '../services/formulario.service';
     MatButtonModule,
     MatCardModule,
     NgxMaskDirective,
+    MatIconModule,
     
   ],
   templateUrl: './banco-brasil.html',

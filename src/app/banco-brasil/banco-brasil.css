@@ -63,7 +63,6 @@ mat-card-title.title{
   }
 }
 
-.mat-mdc-form-field.mat-mdc-form-field-appearance-outline.ng-touched.ng-valid {
-  --mdc-outlined-text-field-focus-outline-width: 2px;
-  --mdc-outlined-text-field-focus-outline-color: green;
+.valid-icon {
+  color: green;
 }
