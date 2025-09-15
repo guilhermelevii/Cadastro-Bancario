@@ -318,6 +318,25 @@ Aperte Ctrl+Shift+P
 Digite: TypeScript: Restart TS Server
 Pressione Enter
 
+## Módulos Utilizados no Projeto.
+
+// Módulos Essenciais
+    CommonModule, // Fornece diretivas como NgIf e NgFor para a renderização condicional e de listas.
+
+// Módulos para Formulários Reativos
+    ReactiveFormsModule, // Habilita o uso de formulários reativos para gerenciar o estado e a validação do formulário.
+
+// Componentes do Angular Material
+    MatFormFieldModule, // Contêiner para inputs, adicionando rótulos flutuantes e mensagens de erro.
+    MatSelectModule,    // Fornece o componente de seleção (dropdown) estilizado.
+    MatInputModule,     // Estiliza os campos de entrada (input) nativos com o design do Material.
+    MatButtonModule,    // Fornece botões estilizados.
+    MatCardModule,      // Um contêiner de cartão para agrupar visualmente o conteúdo do formulário.
+    MatIconModule,      // Permite o uso de ícones do Material Design.
+
+// Biblioteca de Terceiros
+    NgxMaskDirective,   // Diretiva para aplicar máscaras de formatação a campos de entrada (ex: CPF, telefone).
+
 
 ## 📖 Licença
 
