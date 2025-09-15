@@ -63,3 +63,8 @@ mat-card-title.title{
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+.valid-icon {
+  color: green;
+}

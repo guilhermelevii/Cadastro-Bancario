@@ -9,6 +9,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Descrição/Nome do Evento</mat-label>
         <input matInput formControlName="descricao">
+        <mat-icon matSuffix *ngIf="form.get('descricao')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('descricao')?.hasError('required')">Campo obrigatório</mat-error>
         <mat-error *ngIf="form.get('descricao')?.hasError('minlength')">Mínimo 3 caracteres</mat-error>
       </mat-form-field>
@@ -17,6 +18,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Código Manager</mat-label>
         <input matInput formControlName="codigoManager" mask="000000"> <!-- até 6 dígitos -->
+        <mat-icon matSuffix *ngIf="form.get('codigoManager')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('codigoManager')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -24,6 +26,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Sigla</mat-label>
         <input matInput formControlName="sigla" />
+        <mat-icon matSuffix *ngIf="form.get('sigla')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('sigla')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -31,6 +34,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Cedente-Conta</mat-label>
         <input matInput formControlName="cedenteConta" mask="0000000000"> <!-- até 10 dígitos -->
+        <mat-icon matSuffix *ngIf="form.get('cedenteConta')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('cedenteConta')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -38,6 +42,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Dígito Cedente/Conta</mat-label>
         <input matInput formControlName="digitoConta" mask="0"> <!-- 1 dígito -->
+        <mat-icon matSuffix *ngIf="form.get('digitoConta')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('digitoConta')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -45,6 +50,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Chave</mat-label>
         <input matInput formControlName="chave">
+        <mat-icon matSuffix *ngIf="form.get('chave')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('chave')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -52,6 +58,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Agência</mat-label>
         <input matInput formControlName="agencia" mask="0000"> <!-- 4 dígitos -->
+        <mat-icon matSuffix *ngIf="form.get('agencia')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('agencia')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -59,6 +66,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Sequência Inicial de Boletos</mat-label>
         <input matInput formControlName="seqInicial" mask="0000000"> <!-- 7 dígitos -->
+        <mat-icon matSuffix *ngIf="form.get('seqInicial')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('seqInicial')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
@@ -66,6 +74,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Sequência Final de Boletos</mat-label>
         <input matInput formControlName="seqFinal" mask="0000000"> <!-- 7 dígitos -->
+        <mat-icon matSuffix *ngIf="form.get('seqFinal')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('seqFinal')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
 
