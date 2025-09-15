@@ -1,0 +1,32 @@
+<!-- home.component.html -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+<div class="home-container" [class.com-selecao]="bancoSelecionado">
+  <div class="card">
+    <h2 class="titulo">Cadastro Bancário</h2>
+
+    <div class="container">
+      <mat-form-field appearance="outline" class="select-banco">
+        <mat-label>Selecione o Banco</mat-label>
+        <mat-select [(ngModel)]="bancoSelecionado">
+          <mat-option value="">-- Selecione o Banco --</mat-option>
+          <mat-option value="BB">Banco do Brasil</mat-option>
+          <mat-option value="SICOOB">Banco Sicoob</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="conteudo" *ngIf="bancoSelecionado">
+      <ng-container *ngIf="bancoSelecionado === 'BB'">
+        <app-banco-brasil></app-banco-brasil>
+      </ng-container>
+      <ng-container *ngIf="bancoSelecionado === 'SICOOB'">
+        <app-sicoob></app-sicoob>
+      </ng-container>
+    </div>
+  </div>
+</div>
