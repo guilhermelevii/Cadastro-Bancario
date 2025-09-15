@@ -22,7 +22,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+               {
+               "glob": "**/*",
+              "input": "assets"
+  }
             ],
             "styles": [
               "src/custom-theme.scss",
