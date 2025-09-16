@@ -17,7 +17,7 @@
       <!-- Código Manager -->
       <mat-form-field appearance="outline">
         <mat-label>Código Manager</mat-label>
-        <input matInput formControlName="codigoManager" mask="000000"> <!-- até 6 dígitos -->
+        <input matInput formControlName="codigoManager" mask="0000"> <!-- até 4 dígitos -->
         <mat-icon matSuffix *ngIf="form.get('codigoManager')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('codigoManager')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -33,7 +33,7 @@
       <!-- Cedente Conta -->
       <mat-form-field appearance="outline">
         <mat-label>Cedente-Conta</mat-label>
-        <input matInput formControlName="cedenteConta" mask="0000000000"> <!-- até 10 dígitos -->
+        <input matInput formControlName="cedenteConta" mask="000000"> <!-- até 10 dígitos -->
         <mat-icon matSuffix *ngIf="form.get('cedenteConta')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('cedenteConta')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -65,7 +65,7 @@
       <!-- Seq Inicial -->
       <mat-form-field appearance="outline">
         <mat-label>Sequência Inicial de Boletos</mat-label>
-        <input matInput formControlName="seqInicial" mask="0000000"> <!-- 7 dígitos -->
+        <input matInput formControlName="seqInicial" mask="000000"> <!-- 6 dígitos -->
         <mat-icon matSuffix *ngIf="form.get('seqInicial')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('seqInicial')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -73,7 +73,7 @@
       <!-- Seq Final -->
       <mat-form-field appearance="outline">
         <mat-label>Sequência Final de Boletos</mat-label>
-        <input matInput formControlName="seqFinal" mask="0000000"> <!-- 7 dígitos -->
+        <input matInput formControlName="seqFinal" mask="000000"> <!-- 6 dígitos -->
         <mat-icon matSuffix *ngIf="form.get('seqFinal')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('seqFinal')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>

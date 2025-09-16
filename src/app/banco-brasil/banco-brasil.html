@@ -20,7 +20,7 @@
       <!-- Código Manager -->
       <mat-form-field appearance="outline">
         <mat-label>Código Manager</mat-label>
-        <input matInput formControlName="codigoManager"  mask="000000"> <!-- até 6 dígitos -->
+        <input matInput formControlName="codigoManager"  mask="0000"> <!-- até 4 dígitos -->
         <mat-icon matSuffix *ngIf="form.get('codigoManager')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('codigoManager')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -36,7 +36,7 @@
       <!-- Número Convênio -->
       <mat-form-field appearance="outline">
         <mat-label>Número do Convênio</mat-label>
-        <input matInput formControlName="numeroConvenio" mask="0000">
+        <input matInput formControlName="numeroConvenio" mask="0000000">
         <mat-icon matSuffix *ngIf="form.get('numeroConvenio')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('numeroConvenio')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -44,7 +44,7 @@
       <!-- E-commerce -->
       <mat-form-field appearance="outline">
         <mat-label>E-commerce</mat-label>
-        <input matInput formControlName="eCommerce" mask="0000">
+        <input matInput formControlName="eCommerce" mask="000000">
         <mat-icon matSuffix *ngIf="form.get('eCommerce')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('eCommerce')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -52,7 +52,7 @@
       <!-- Carteira -->
       <mat-form-field appearance="outline">
         <mat-label>Carteira</mat-label>
-        <input matInput formControlName="carteira" mask="000">
+        <input matInput formControlName="carteira" mask="00">
         <mat-icon matSuffix *ngIf="form.get('carteira')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('carteira')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -61,7 +61,7 @@
       <!-- Variacão -->
       <mat-form-field appearance="outline">
         <mat-label>Variação</mat-label>
-        <input matInput formControlName="variacao" mask="00">
+        <input matInput formControlName="variacao" mask="000">
         <mat-icon matSuffix *ngIf="form.get('variacao')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('variacao')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>
@@ -69,7 +69,7 @@
       <!-- Cedente Conta -->
       <mat-form-field appearance="outline">
         <mat-label>Cedente-Conta</mat-label>
-        <input matInput formControlName="cedenteConta" mask="0000000000">
+        <input matInput formControlName="cedenteConta" mask="0000">
         <mat-icon matSuffix *ngIf="form.get('cedenteConta')?.valid" class="valid-icon">done</mat-icon>
         <mat-error *ngIf="form.get('cedenteConta')?.hasError('required')">Campo obrigatório</mat-error>
       </mat-form-field>

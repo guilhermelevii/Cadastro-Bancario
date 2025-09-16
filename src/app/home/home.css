@@ -2,12 +2,12 @@
 /* Quando já tem banco selecionado, o conteúdo sobe */
 .home-container.com-selecao {
   justify-content: flex-start; /* empurra pro topo */
-  padding-top: 3rem; /* espaço do topo */
+  padding-top: 2rem; /* espaço do topo */
 }
 
 /* Quando tem conteúdo selecionado, o card expande */
 .card .conteudo {
-  margin-top: 1.5rem;
+  margin-top: 0.2rem;
 }
 
 /* Select responsivo */
