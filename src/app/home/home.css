@@ -1,19 +1,20 @@
-/* Container geral ocupa a tela toda */
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* centraliza verticalmente */
-  min-height: 100vh;
-  transition: all 0.5s ease;
-  padding: 1rem;
-  
-}
 
 /* Quando já tem banco selecionado, o conteúdo sobe */
 .home-container.com-selecao {
   justify-content: flex-start; /* empurra pro topo */
   padding-top: 3rem; /* espaço do topo */
+}
+
+/* Quando tem conteúdo selecionado, o card expande */
+.card .conteudo {
+  margin-top: 1.5rem;
+}
+
+/* Select responsivo */
+.select-banco {
+  width: 100%;
+  max-width: 100%;
+  min-width: 300px;
 }
 
 /* Título */
@@ -31,13 +32,6 @@
   /* padding-bottom: 20px; */
   font-size: 40px;
   
-}
-
-/* Select responsivo */
-.select-banco {
-  width: 100%;
-  max-width: 100%;
-  min-width: 300px;
 }
 
 /* Conteúdo do formulário */
@@ -60,12 +54,7 @@
   transition: all 0.3s ease;
 }
 
-/* Quando tem conteúdo selecionado, o card expande */
-.card .conteudo {
-  margin-top: 1.5rem;
-}
 
-/* Fundo geral da tela */
 /* Fundo geral da tela */
 .home-container {
   display: flex;
@@ -73,6 +62,8 @@
   align-items: center;
   justify-content: center; 
   min-height: 100vh;
+  transition: all 0.5s ease;
+  padding: 1rem;
 
   /* textura hexagonal + gradiente */
   background: 
@@ -81,22 +72,15 @@
 
   background-size: 80px, cover; /* primeiro: hexágonos | segundo: gradiente */
   background-position: center;
-  
-  padding: 1rem;
 }
 
-
-/* Quando já tem banco selecionado, o conteúdo sobe */
-.home-container.com-selecao {
-  justify-content: flex-start;
-  padding-top: 3rem;
-}
 
 .logo-sif img {
   width: 100px;   /* controla a largura */
   height: auto;   /* mantém a proporção */
   display: block;
   margin: 20px auto; /* centraliza horizontalmente */
+  margin-top: -20px;
 }
 
 
