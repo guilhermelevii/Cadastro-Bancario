@@ -79,12 +79,17 @@
       </mat-form-field>
 
       <!-- Botão -->
-      <div class="form-actions">
+      <!-- <div class="form-actions">
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" [ngClass]="{active: form.valid}">
           Enviar
         </button>
-      </div>
+      </div> -->
     </form>
+     <div class="form-actions">
+        <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="form.invalid" [ngClass]="{active: form.valid}">
+          Enviar
+        </button>
+      </div>
   </mat-card-content>
 </mat-card>
 
