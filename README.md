@@ -347,6 +347,13 @@ Pressione Enter
   }
 ]
 
+
+## BUILDAR CLI 2.0 +
+
+ng build --configuration=production
+
+
+
 ## 📖 Licença
 
 Este projeto é licenciado sob os termos da [MIT License](LICENSE).

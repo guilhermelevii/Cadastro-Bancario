@@ -37,7 +37,7 @@ mat-card-title.title{
   font-size: 1.1rem;           /* fonte maior */
   font-weight: 500;            /* mais “forte” */
   border-radius: 0.5rem;       /* cantos arredondados */
-  min-width: 150px;            /* largura mínima */
+  min-width: 300px;            /* largura mínima */
   transition: all 0.3s ease;   /* animação suave */
 }
 
