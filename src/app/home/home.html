@@ -6,8 +6,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
 
+<div class="layout">
+<!-- Navbar lateral -->
+  <nav class="side-navbar">
+    <div class="logo-sif">
+      <img src="assets/LOGO-SIF.png" alt="logo-sif">
+    </div>
+    <ul class="menu">
+      <li><a href="#">Página Inicial</a></li>
+      <li><a href="#">Projetos Terminando</a></li>
+      <li><a href="#">Informações do Projeto</a></li>
+      <li><a href="#">Solicitações</a></li>
+      <li><a href="#">Relatórios</a></li>
+    </ul>
+  </nav>
+
 <div class="home-container" [class.com-selecao]="bancoSelecionado">
-  
   <div class="card">
      <div class="logo-sif">
       <img src="assets/LOGO-SIF.png" alt="logo-sif">
@@ -35,4 +49,5 @@
       </ng-container>
     </div>
   </div>
+</div>
 </div>

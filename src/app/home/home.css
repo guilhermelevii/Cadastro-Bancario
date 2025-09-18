@@ -1,3 +1,73 @@
+/* ------------------------------- */
+
+/* Layout geral */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Navbar lateral */
+.side-navbar {
+  background-color: #1e3c72;
+  color: white;
+  width: 240px;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: fixed; /* fixa do lado esquerdo */
+  left: 0;
+  top: 0;
+}
+
+/* Logo dentro da navbar */
+.side-navbar .logo-sif img {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Menu */
+.side-navbar .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-navbar .menu li {
+  margin-bottom: 1rem;
+}
+
+.side-navbar .menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.side-navbar .menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Ajusta o conteúdo principal para não ficar embaixo da navbar */
+.home-container {
+  flex: 1;
+  margin-left: 240px; /* deixa espaço pro menu lateral */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding: 2rem;
+}
+
+/* ----------------------------------------------------------------------- */
 
 /* Quando já tem banco selecionado, o conteúdo sobe */
 .home-container.com-selecao {
@@ -82,3 +152,5 @@
   margin: 20px auto; /* centraliza horizontalmente */
   margin-top: -20px;
 }
+
+
