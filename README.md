@@ -357,3 +357,35 @@ ng build --configuration=production
 ## 📖 Licença
 
 Este projeto é licenciado sob os termos da [MIT License](LICENSE).
+
+
+# Módulo	Para que serve
+MatCardModule	Componente <mat-card>
+MatFormFieldModule	<mat-form-field> com labels flutuantes
+MatInputModule	<input matInput> para campos de texto
+MatButtonModule	<button mat-button> / <button mat-raised-button>
+MatIconModule	<mat-icon> para ícones
+MatCheckboxModule	<mat-checkbox> para checkboxes
+MatProgressSpinnerModule	<mat-spinner> para loading
+MatSnackBarModule	Para notificações toast
+BrowserAnimationsModule	OBRIGATÓRIO - Para animações
+
+
+
+
+Angular usa sua própria sintaxe de eventos: (evento)="metodo()"
+
+
+JavaScript Puro	Angular
+onclick="funcao()"	(click)="funcao()"
+onchange="funcao()"	(change)="funcao()"
+onsubmit="funcao()"	(submit)="funcao()"
+
+
+
+Tive que realizar alterações no arquivo custom-theme.scss, depois que eu instalei a lib Angular Material
+
+Tive que dar uma olhada no arquivo app.config.ts 
+
+
+SnackBar - Para ativar mensagens/alertas
